@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="40dp"
+    android:paddingTop="240dp"
+    android:paddingBottom="100dp"
+    android:paddingRight="40dp"
+    android:isScrollContainer="true"
+    android:layout_centerVertical="true"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnact1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/teal_700"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:onClick="appGeneral"
+        android:text="@string/btn_name1"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btnact2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/teal_700"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:onClick="appCountVote"
+        android:text="@string/btn_name2"
+        android:textAlignment="center" />
+    <Button
+        android:id="@+id/btnact3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto"
+        android:backgroundTint="@color/teal_700"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:onClick="appSalary"
+        android:text="@string/btn_name3"
+        android:textAlignment="center" />
+
+</LinearLayout>

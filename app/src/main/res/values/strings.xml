@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Aplicación de Tareas</string>
+    <string name="btn_name1">Fórmula General</string>
+    <string name="btn_name2">Conteo de Votos</string>
+    <string name="btn_name3">Pago líquido del empleado</string>
+    <string name="btn_name4">Calcular</string>
+    <string name="btn_name5">Mostrar resultados</string>
+    <string name="btn_name6">Agregar Empleado</string>
+    <string name="hint_a">Ingrese el valor de "a"</string>
+    <string name="hint_b">Ingrese el valor de "b"</string>
+    <string name="hint_c">Ingrese el valor de "c"</string>
+    <string name="hint_secuence">Ingrese la secuencia de votos</string>
+    <string name="hint_name">Ingrese el nombre</string>
+    <string name="hint_lastname">Ingrese el apellido</string>
+    <string name="tv_cargo">Cargo del empleado</string>
+    <string name="hint_hour">Ingrese las horas trabajadas al mes</string>
+    <string name="rb_cargo1">Gerente</string>
+    <string name="rb_cargo2">Asistente</string>
+    <string name="rb_cargo3">Secretaria</string>
+    <string name="rb_cargo4">Otro Cargo</string>
+    <string name="tv_det">Detalles de los Empleados</string>
+    <string name="tv_emp1">Empleado 1</string>
+    <string name="tv_emp2">Empleado 2</string>
+    <string name="tv_emp3">Empleado 3</string>
+    <string name="tv_mayores3">Salarios mayores a $300.00</string>
+    <string name="tv_ma">Salario Mayor</string>
+    <string name="tv_me">Salario Menor</string>
+</resources>
