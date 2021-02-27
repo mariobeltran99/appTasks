@@ -74,32 +74,37 @@ public class Employee extends AppCompatActivity {
         rdb1.setChecked(true);
     }
     public void addEmployee(View v){
-        String name = named.getText().toString();
-        String last = lastnamed.getText().toString();
-        Integer hours = Integer.parseInt(hourd.getText().toString());
-        String cargo = "";
-        if(hours <= 0){
-            Toast.makeText(this,"No se pueden números negativos o cero",Toast.LENGTH_LONG).show();
-        }else{
-            if(rdb1.isChecked()){
-                cargo = "Gerente";
-            }else if(rdb2.isChecked()){
-                cargo = "Asistente";
-            }else if(rdb3.isChecked()){
-                cargo = "Secretaria";
-            }else if(rdb4.isChecked()){
-                cargo = "Otro";
-            }
-            Person per = new Person(name, last, hours, cargo);
-            persons.add(n,per);
-            n++;
-            if(n > 2){
-                Intent j = new Intent(this,DetailsEmployee.class);
-                j.putExtra("PersonsList", persons);
-                startActivity(j);
+        try{
+            String name = named.getText().toString();
+            String last = lastnamed.getText().toString();
+            Integer hours = Integer.parseInt(hourd.getText().toString());
+            String cargo = "";
+            if(hours <= 0){
+                Toast.makeText(this,"No se pueden números negativos o cero",Toast.LENGTH_LONG).show();
             }else{
-                clearComponents();
+                if(rdb1.isChecked()){
+                    cargo = "Gerente";
+                }else if(rdb2.isChecked()){
+                    cargo = "Asistente";
+                }else if(rdb3.isChecked()){
+                    cargo = "Secretaria";
+                }else if(rdb4.isChecked()){
+                    cargo = "Otro";
+                }
+                Person per = new Person(name, last, hours, cargo);
+                persons.add(n,per);
+                n++;
+                if(n > 2){
+                    Intent j = new Intent(this,DetailsEmployee.class);
+                    j.putExtra("PersonsList", persons);
+                    startActivity(j);
+                }else{
+                    clearComponents();
+                }
             }
+        }catch (Exception e){
+            Toast.makeText(this, "No cumplió con lo solicitado", Toast.LENGTH_LONG).show();
         }
+
     }
 }

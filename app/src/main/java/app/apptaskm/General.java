@@ -59,20 +59,24 @@ public class General extends AppCompatActivity {
         });
     }
     public void formulate(View v){
-        double dis = 0.0, x1 = 0.0, x2 = 0.0, deno = 0.0;
-        DecimalFormat df = new DecimalFormat("0.00");
-        double va = Double.parseDouble(a.getText().toString());
-        double vb = Double.parseDouble(b.getText().toString());
-        double vc = Double.parseDouble(c.getText().toString());
-        dis = Math.pow(vb,2)-4*va*vc;
-        deno = 2 * va;
-        if(dis >= 0 && deno != 0){
-            x1 = (- vb + Math.sqrt(dis) ) / (2 * va);
-            x2 = (- vb - Math.sqrt(dis) ) / (2 * va);
-            tx1.setText("X1: " + String.valueOf(df.format(x1)));
-            tx2.setText("X2: " + String.valueOf(df.format(x2)));
-        }else{
-            Toast.makeText(this, "No se puede resolver porque el discriminante da imaginario o se indetermina", Toast.LENGTH_LONG).show();
+        try{
+            double dis = 0.0, x1 = 0.0, x2 = 0.0, deno = 0.0;
+            DecimalFormat df = new DecimalFormat("0.00");
+            double va = Double.parseDouble(a.getText().toString());
+            double vb = Double.parseDouble(b.getText().toString());
+            double vc = Double.parseDouble(c.getText().toString());
+            dis = Math.pow(vb,2)-4*va*vc;
+            deno = 2 * va;
+            if(dis >= 0 && deno != 0){
+                x1 = (- vb + Math.sqrt(dis) ) / (2 * va);
+                x2 = (- vb - Math.sqrt(dis) ) / (2 * va);
+                tx1.setText("X1: " + String.valueOf(df.format(x1)));
+                tx2.setText("X2: " + String.valueOf(df.format(x2)));
+            }else{
+                Toast.makeText(this, "No se puede resolver, porque el discriminante da imaginario o se indetermina", Toast.LENGTH_LONG).show();
+            }
+        }catch (Exception e){
+            Toast.makeText(this, "No cumplió con lo solicitado", Toast.LENGTH_LONG).show();
         }
     }
 }

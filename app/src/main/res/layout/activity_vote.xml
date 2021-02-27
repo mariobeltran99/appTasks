@@ -3,13 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="40dp"
-    android:paddingTop="100dp"
-    android:paddingBottom="100dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
     android:paddingRight="40dp"
     android:isScrollContainer="true"
     android:layout_centerVertical="true"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/tv_ind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/inst" />
     <EditText
         android:id="@+id/etsecuence"
         android:layout_width="match_parent"
@@ -20,7 +32,7 @@
         android:hint="@string/hint_secuence"
         android:importantForAutofill="no"
         android:inputType="number"
-        android:digits="0123456789,"
+        android:digits="1234,"
         android:textAlignment="center"
         android:fontFamily="@font/roboto"
         android:textColorHint="@color/black"
@@ -76,6 +88,17 @@
         android:text="" />
     <TextView
         android:id="@+id/tv_cand4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/roboto"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="" />
+    <TextView
+        android:id="@+id/tv_cand5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
